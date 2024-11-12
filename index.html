@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   <div id="root">
+    
+    
+
+   </div>
+
+
+   <script src="./react.js"></script>
+   <script src="./react-dom.js"></script>
+
+   <script>
+        const abc = React.createElement('h1', null, React.createElement('strong', null, React.createElement('span', null, 'Hi')))
+        // console.log(abc)
+        const root = ReactDOM.createRoot(document.querySelector('#root'))
+        root.render(abc)
+
+   </script>
+
+   
+</body>
+</html>
