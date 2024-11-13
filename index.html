@@ -16,12 +16,45 @@
 
    <script src="./react.js"></script>
    <script src="./react-dom.js"></script>
+   <script src="./babel.js"></script>
 
-   <script>
-        const abc = React.createElement('h1', null, React.createElement('strong', null, React.createElement('span', null, 'Hi')))
+   <script type="text/babel">
+
+       function Header(){
+        return( 
+            <>
+              <h1>This is Header</h1>
+            </> 
+        )
+        }
+
+       
+
+       function Footer(){
+        return(
+            <>
+              <h1>This is Footer</h1>
+            </>
+        ) 
+       }
+
+       function Home({firstName}){
+        return(
+            <>
+            <Header />
+
+            <h1>This is {firstName}</h1>
+
+            <Footer />
+            
+            </>
+        )
+       }
+        // const abc = React.createElement('h1', null, React.createElement('strong', null, React.createElement('span', null, 'Hi')))
+        const abc = <h1><span>Hello World</span></h1>
         // console.log(abc)
         const root = ReactDOM.createRoot(document.querySelector('#root'))
-        root.render(abc)
+        root.render(<Home firstName='Eugenia'/>)
 
    </script>
 
